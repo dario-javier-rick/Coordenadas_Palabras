@@ -2,7 +2,7 @@
 
 Ejercicio de búsqueda de palabras en array de strings
 
-##Punto 1
+## Punto 1
 
 Desarrollar un algoritmo que encuentre las palabras “TELEFE” “VIACOM” “JAVA” dentro del siguiente array de strings:
 
@@ -42,12 +42,12 @@ return coordenadas;
 
 }
 
-##Punto 2
+## Punto 2
 
 a) Desarrollar una API REST que reciba la Palabra a buscar y devuelva las coordenadas usando el componente desarrollado en el punto (1)
 
 b) Escribir los tests unitarios necesarios para lograr una cobertura mayor al 60%
 
-##Punto 3
+## Punto 3
 
 Persistir en una Base de Datos cada búsqueda que se haya realizado en la API. Permitir visualizar las búsquedas realizadas.
