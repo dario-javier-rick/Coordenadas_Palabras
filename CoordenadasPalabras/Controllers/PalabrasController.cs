@@ -1,5 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using CoordenadasPalabras.BLL;
+using CoordenadasPalabras.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CoordenadasPalabras.Controllers
 {
@@ -7,10 +10,30 @@ namespace CoordenadasPalabras.Controllers
     [ApiController]
     public class PalabrasController : ControllerBase
     {
+        private string[] secuencias = { "AGVNFT", "XJILSB", "CHAOHD", "ERCVTQ", "ASOYAO", "ERMYUA", "TELEFE" };
+
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        [Route("GetPosiciones")]
+        public ActionResult<int[,]> GetPosiciones(string palabra)
         {
-            return new string[] { "test1", "test2" };
+            //using (CrucigramaContext db = new CrucigramaContext(null))
+            //{
+            //    db.Logs.Add(new Log
+            //    {
+            //        Fecha = DateTime.Now,
+            //        Thread = "",
+            //        Level = "INFO",
+            //        Logger = "",
+            //        SessionId = "",
+            //        Message = "",
+            //        Exception = null
+            //    });
+
+            //    db.SaveChangesAsync();
+            //}
+
+            secuencias.ConfigurarEstrategiaBusqueda(new EstrategiaBusqueda());
+            return secuencias.Buscar(palabra);
         }
 
     }

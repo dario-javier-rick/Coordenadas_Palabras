@@ -1,4 +1,3 @@
-using System;
 using CoordenadasPalabras.Controllers;
 using Xunit;
 
@@ -16,7 +15,7 @@ namespace CoordenadasPalabrasTest
         [Fact]
         public void Test1()
         {
-            var resultado = _controller.Get();
+            var resultado = _controller.GetPosiciones("test");
             Assert.NotNull(resultado); //TODO
         }
     }
