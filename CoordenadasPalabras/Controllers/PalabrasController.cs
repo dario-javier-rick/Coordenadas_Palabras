@@ -33,7 +33,8 @@ namespace CoordenadasPalabras.Controllers
             //}
 
             secuencias.ConfigurarEstrategiaBusqueda(new EstrategiaBusqueda());
-            return secuencias.Buscar(palabra);
+            var resultado = secuencias.Buscar(palabra);
+            return resultado;
         }
 
     }

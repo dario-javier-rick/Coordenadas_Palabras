@@ -1,7 +1,7 @@
 using CoordenadasPalabras.Controllers;
 using Xunit;
 
-namespace CoordenadasPalabrasTest
+namespace CoordenadasPalabrasTest.Controllers
 {
     public class PalabrasTest
     {
@@ -15,7 +15,7 @@ namespace CoordenadasPalabrasTest
         [Fact]
         public void Test1()
         {
-            var resultado = _controller.GetPosiciones("test");
+            var resultado = _controller.GetPosiciones("TELEFE");
             Assert.NotNull(resultado); //TODO
         }
     }
